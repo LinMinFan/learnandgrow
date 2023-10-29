@@ -19,3 +19,8 @@
  */
 
 Encore\Admin\Form::forget(['map', 'editor']);
+
+/**
+ * 覆蓋`admin`命名空間下的視圖
+ */
+app('view')->prependNamespace('admin', resource_path('views/admin'));
