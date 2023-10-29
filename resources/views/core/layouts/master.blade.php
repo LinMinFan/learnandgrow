@@ -5,6 +5,10 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('css/fontawesome.min.css')}}" rel="stylesheet">
+    <link href="{{asset('css/global.css')}}" rel="stylesheet">
+    <script src="{{asset('js/jquery.min.js')}}"></script>
     @stack('css')
     {{-- Google Analytics --}}
 <body>
@@ -20,9 +24,9 @@
         @include('site.partials.footer')
     </footer>
 
-    <script defer src=""></script>
-    <script defer src=""></script>
-    <script defer src=""></script>
+    <script defer src="{{asset('js/bootstrap.min.js')}}"></script>
+    <script defer src="{{asset('js/popper.min.js') }}"></script>
+    <script defer src="{{asset('js/main.js')}}"></script>
     @stack('js')
 </body>
 </html>
