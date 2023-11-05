@@ -5,6 +5,7 @@ namespace App\Admin\Forms;
 use Encore\Admin\Widgets\Form;
 use Illuminate\Http\Request;
 use App\Models\Admin\Site;
+use Storage;
 
 class Setting extends Form
 {
@@ -33,23 +34,41 @@ class Setting extends Form
 
         $requestData = $request->input();
 
-        $hasChanges = false;
+        if ($request->hasFile('favicon')) {
+            $favicon = $request->file('favicon');
+            $favicon_name = $request->file('favicon')->getClientOriginalName();
+            $requestData['favicon'] = 'site/'.$favicon_name;
+            $favicon->storeAs('public/site', $favicon_name);
+        }
+        if ($request->hasFile('logo')) {
+            $logo = $request->file('logo');
+            $logo_name = $request->file('logo')->getClientOriginalName();
+            $requestData['logo'] = 'site/'.$logo_name;
+            $logo->storeAs('public/site', $logo_name);
+        }
+        if ($request->hasFile('og_image')) {
+            $og_image = $request->file('og_image');
+            $og_image_name = $request->file('og_image')->getClientOriginalName();
+            $requestData['og_image'] = 'site/'.$og_image_name;
+            $og_image->storeAs('public/site', $og_image_name);
+        }
 
-        foreach ($requestData as $key => $value) {
-            if ($site->{$key} !== $value) {
-                $hasChanges = true;
-                break;
+        $message = '';
+
+        try {
+
+            if ($site->update($requestData)) {
+                admin_success(__('Processed successfully.'));
+            } else {
+                admin_success(__('No changes detected.'));
             }
+
+        } catch (\Exception $e) {
+            
+            $message = $e->getMessage();
         }
 
-        if ($hasChanges) {
-            $site->update($requestData);
-            admin_success(__('Processed successfully.'));
-        } else {
-            admin_success(__('No changes detected.'));
-        }
-
-        return back();
+        return back()->with($message);
     }
 
     /**
@@ -64,9 +83,9 @@ class Setting extends Form
         $this->textarea('google_gtag',__('google_gtag'));
         $this->text('copyright',__('copyright'));
         $this->email('email',__('email'));
-        $this->image('favicon',__('favicon'));
-        $this->image('logo',__('logo'));
-        $this->image('og_image',__('og_image'));
+        $this->file('favicon',__('favicon'))->removable();
+        $this->file('logo',__('logo'))->removable();
+        $this->file('og_image',__('og_image'))->removable();
     }
 
     /**
