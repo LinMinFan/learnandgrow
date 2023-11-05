@@ -16,7 +16,12 @@ class SiteMenu extends Model
         ModelTree::selectOptions as parentSelectOptions;
     }
 
-    protected $fillable = ['parent_id', 'order', 'title', 'uri'];
+    protected $fillable = [
+        'parent_id',
+        'order',
+        'title',
+        'uri'
+    ];
 
     
 }

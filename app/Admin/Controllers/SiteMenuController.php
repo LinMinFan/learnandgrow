@@ -10,7 +10,7 @@ use Encore\Admin\Layout\Content;
 use Encore\Admin\Layout\Row;
 use Encore\Admin\Tree;
 use Encore\Admin\Widgets\Box;
-use Illuminate\Routing\Controller;
+use App\Http\Controllers\Controller;
 
 class SiteMenuController extends Controller
 {

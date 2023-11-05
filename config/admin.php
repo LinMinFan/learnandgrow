@@ -192,6 +192,7 @@ return [
         'menu_table' => 'admin_menu',
         'menu_model' => Encore\Admin\Auth\Database\Menu::class,
         'site_menu_model' => App\Models\Admin\SiteMenu::class,
+        'admin_site_model' => App\Models\Admin\Site::class,
 
         // Pivot table for table above.
         'operation_log_table'    => 'admin_operation_log',
@@ -413,4 +414,25 @@ return [
             'allowed_ext' => 'jpg,jpeg,png,pdf,doc,docx,zip'
         ],
     ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | 網站設定
+    |--------------------------------------------------------------------------
+    |
+    | 自訂預設網站配置
+    |
+    */
+    'admin_config' => [
+        'title' => '學習與成長',
+        'keywords' => '',
+        'description' => '',
+        'google_ga4' => '',
+        'google_gtag' => '',
+        'copyright' => 'LIN MIN FAN',
+        'email' => 'cvse00566@gmail.com',
+        'favicon' => '',
+        'logo' => '',
+        'og_image' => '',
+    ]
 ];
