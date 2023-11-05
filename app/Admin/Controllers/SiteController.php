@@ -13,7 +13,7 @@ class SiteController extends Controller
     public function index(Content $content)
     {
         return $content
-            ->title('網站設置')
+            ->title(__('Site Config'))
             ->body(new Setting());
     }
 
@@ -31,23 +31,23 @@ class SiteController extends Controller
 
         $form->text('title',__('網站標題'));
     
-        $form->text('keywords',__('關鍵字'));
+        $form->textarea('keywords',__('關鍵字'));
     
-        $form->text('description',__('網站描述'));
+        $form->textarea('description',__('網站描述'));
     
-        $form->text('google_ga4',__('google ga4'));
+        $form->textarea('google_ga4',__('google ga4'));
     
-        $form->text('google_gtag',__('google gtag'));
+        $form->textarea('google_gtag',__('google gtag'));
     
         $form->text('copyright',__('版權所有'));
     
-        $form->text('email',__('Email'));
+        $form->email('email',__('Email'));
     
-        $form->text('favicon',__('網站標誌'));
+        $form->image('favicon',__('網站標誌'));
     
-        $form->text('logo',__('網站LOGO'));
+        $form->image('logo',__('網站LOGO'));
     
-        $form->text('og_image',__('meta 圖片'));
+        $form->image('og_image',__('meta 圖片'));
 
         $form->footer(function ($footer) {
             $footer->disableReset();

@@ -13,7 +13,10 @@ class Setting extends Form
      *
      * @var string
      */
-    public $title = 'genernalConfig';
+    public function title()
+    {
+        return __('genernalConfig menu');
+    }
 
     /**
      * Handle the form request.
@@ -41,9 +44,9 @@ class Setting extends Form
 
         if ($hasChanges) {
             $site->update($requestData);
-            admin_success('Processed successfully.');
+            admin_success(__('Processed successfully.'));
         } else {
-            admin_success('No changes detected.');
+            admin_success(__('No changes detected.'));
         }
 
         return back();
@@ -54,16 +57,16 @@ class Setting extends Form
      */
     public function form()
     {
-        $this->text('title',__('title'));
-        $this->text('keywords',__('keywords'));
-        $this->text('description',__('description'));
-        $this->text('google_ga4',__('google_ga4'));
-        $this->text('google_gtag',__('google_gtag'));
+        $this->text('title',__('site_title'));
+        $this->textarea('keywords',__('keywords'));
+        $this->textarea('description',__('description'));
+        $this->textarea('google_ga4',__('google_ga4'));
+        $this->textarea('google_gtag',__('google_gtag'));
         $this->text('copyright',__('copyright'));
         $this->email('email',__('email'));
-        $this->text('favicon',__('favicon'));
-        $this->text('logo',__('logo'));
-        $this->text('og_image',__('og_image'));
+        $this->image('favicon',__('favicon'));
+        $this->image('logo',__('logo'));
+        $this->image('og_image',__('og_image'));
     }
 
     /**
