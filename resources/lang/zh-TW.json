@@ -48,5 +48,12 @@
     "Roles": "角色管理",
     "Permission": "權限管理",
     "Menu": "選單管理",
-    "Operation log": "操作紀錄"
+    "Operation log": "操作紀錄",
+    "Title": "標題",
+    "Description": "描述",
+    "Image": "圖片",
+    "Mobile image": "手機圖片",
+    "Label": "標籤",
+    "Url": "連結網址",
+    "Sort": "排序"
 }

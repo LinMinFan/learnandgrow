@@ -6,8 +6,7 @@ use App\Models\Admin\Slide;
 use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
-use Encore\Admin\Show;
-
+use Storage;
 class SlideController extends AdminController
 {
     /**
@@ -15,7 +14,10 @@ class SlideController extends AdminController
      *
      * @var string
      */
-    protected $title = '輪播圖片';
+    protected function title()
+    {
+        return __('Slide');
+    }
 
     /**
      * Make a grid builder.
@@ -26,45 +28,46 @@ class SlideController extends AdminController
     {
         $grid = new Grid(new Slide());
 
-        $grid->column('id', __('Id'));
+        $grid->model()->orderBy('sort', 'asc');
+
+        $grid->disableExport();
+        $grid->disableRowSelector();
+
+        $grid->disableFilter();
+
+        $grid->actions(function ($actions) {
+            $actions->disableView();
+        });
+
         $grid->column('title', __('Title'));
-        $grid->column('description', __('Description'));
-        $grid->column('image', __('Image'));
-        $grid->column('mobile_image', __('Mobile image'));
-        $grid->column('label', __('Label'));
-        $grid->column('url', __('Url'));
-        $grid->column('sort', __('Sort'));
-        $grid->column('created_at', __('Created at'));
-        $grid->column('updated_at', __('Updated at'));
-        $grid->column('deleted_at', __('Deleted at'));
+        $grid->column('image', __('Image'))
+            ->display(function($image) {
+                return sprintf('<img class="thumbnail" src="%s" style="%s">',
+                $image ? Storage::url($image) : asset('img/noimage.jpg'),
+                    'max-width:150px'
+                );
+            });
+        $grid->column('mobile_image', __('Mobile image'))
+            ->display(function($mobile_image) {
+                return sprintf('<img class="thumbnail" src="%s" style="%s">',
+                $mobile_image ? Storage::url($mobile_image) : asset('img/noimage.jpg'),
+                'max-width:150px'
+                );
+            });
+        $grid->column('label', __('Label'))
+            ->display(function() {
+                return sprintf('<a href="%s" target=”_blank”>%s</a>',
+                    $this->url,
+                    $this->label
+                );
+            });
+
+        $grid->column('sort', __('Sort'))
+            ->editable();
 
         return $grid;
     }
 
-    /**
-     * Make a show builder.
-     *
-     * @param mixed $id
-     * @return Show
-     */
-    protected function detail($id)
-    {
-        $show = new Show(Slide::findOrFail($id));
-
-        $show->field('id', __('Id'));
-        $show->field('title', __('Title'));
-        $show->field('description', __('Description'));
-        $show->field('image', __('Image'));
-        $show->field('mobile_image', __('Mobile image'));
-        $show->field('label', __('Label'));
-        $show->field('url', __('Url'));
-        $show->field('sort', __('Sort'));
-        $show->field('created_at', __('Created at'));
-        $show->field('updated_at', __('Updated at'));
-        $show->field('deleted_at', __('Deleted at'));
-
-        return $show;
-    }
 
     /**
      * Make a form builder.
@@ -75,10 +78,16 @@ class SlideController extends AdminController
     {
         $form = new Form(new Slide());
 
+        $form->tools(function (Form\Tools $tools) {
+            $tools->disableView();
+        });
+
         $form->text('title', __('Title'));
-        $form->text('description', __('Description'));
-        $form->image('image', __('Image'));
-        $form->text('mobile_image', __('Mobile image'));
+        $form->textarea('description', __('Description'));
+        $form->image('image', __('Image'))
+            ->removable();
+        $form->image('mobile_image', __('Mobile image'))
+            ->removable();
         $form->text('label', __('Label'));
         $form->url('url', __('Url'));
         $form->number('sort', __('Sort'))->default(1);

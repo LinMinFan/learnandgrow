@@ -29,25 +29,25 @@ class SiteController extends Controller
             }
         );
 
-        $form->text('title',__('網站標題'));
+        $form->text('title',__('site_title'));
     
-        $form->textarea('keywords',__('關鍵字'));
+        $form->textarea('keywords',__('keywords'));
     
-        $form->textarea('description',__('網站描述'));
+        $form->textarea('description',__('description'));
     
-        $form->textarea('google_ga4',__('google ga4'));
+        $form->textarea('google_ga4',__('google_ga4'));
     
-        $form->textarea('google_gtag',__('google gtag'));
+        $form->textarea('google_gtag',__('google_gtag'));
     
-        $form->text('copyright',__('版權所有'));
+        $form->text('copyright',__('copyright'));
     
-        $form->email('email',__('Email'));
+        $form->email('email',__('email'));
     
-        $form->image('favicon',__('網站標誌'));
+        $form->image('favicon',__('favicon'));
     
-        $form->image('logo',__('網站LOGO'));
+        $form->image('logo',__('logo'));
     
-        $form->image('og_image',__('meta 圖片'));
+        $form->image('og_image',__('og_image'));
 
         $form->footer(function ($footer) {
             $footer->disableReset();
