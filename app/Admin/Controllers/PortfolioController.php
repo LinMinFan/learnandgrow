@@ -2,12 +2,13 @@
 
 namespace App\Admin\Controllers;
 
-use App\Models\Admin\Slide;
+use App\Models\Admin\Portfolio;
 use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Storage;
-class SlideController extends AdminController
+
+class PortfolioController extends AdminController
 {
     /**
      * Title for current resource.
@@ -16,7 +17,7 @@ class SlideController extends AdminController
      */
     protected function title()
     {
-        return __('Slide');
+        return __('Portfolio');
     }
 
     /**
@@ -26,7 +27,7 @@ class SlideController extends AdminController
      */
     protected function grid()
     {
-        $grid = new Grid(new Slide());
+        $grid = new Grid(new Portfolio());
 
         $grid->model()->orderBy('sort', 'asc');
 
@@ -61,6 +62,8 @@ class SlideController extends AdminController
                 );
             });
 
+        $grid->column('category', __('Category'));
+
         $grid->column('sort', __('Sort'))
             ->editable();
 
@@ -75,7 +78,7 @@ class SlideController extends AdminController
      */
     protected function form()
     {
-        $form = new Form(new Slide());
+        $form = new Form(new Portfolio());
 
         $form->tools(function (Form\Tools $tools) {
             $tools->disableView();
@@ -83,6 +86,12 @@ class SlideController extends AdminController
 
         $form->text('title', __('Title'));
         $form->textarea('description', __('Description'));
+
+        $category = config('learnandgrow.portfolio.category');
+
+        $form->select('category', __('Category'))
+            ->options($category);
+
         $form->image('image', __('Image'))
             ->removable();
         $form->image('mobile_image', __('Mobile image'))
@@ -91,8 +100,8 @@ class SlideController extends AdminController
         $form->url('url', __('Url'));
         $form->number('sort', __('Sort'))
             ->min(1)
-            ->default(Slide::whereNull('deleted_at')
-            ->count() + 1);;
+            ->default(Portfolio::whereNull('deleted_at')
+            ->count() + 1);
 
         return $form;
     }
