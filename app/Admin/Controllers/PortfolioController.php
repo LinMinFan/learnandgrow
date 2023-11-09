@@ -42,7 +42,7 @@ class PortfolioController extends AdminController
 
         $grid->column('title', __('Title'))
             ->display(function() {
-                return sprintf('<a href="%s" target=”_blank”>%s</a>',
+                return sprintf('<a href="%s" target="_blank">%s</a>',
                     $this->url,
                     $this->label
                 );
