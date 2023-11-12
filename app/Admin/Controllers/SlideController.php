@@ -62,7 +62,8 @@ class SlideController extends AdminController
             });
 
         $grid->column('sort', __('Sort'))
-            ->editable();
+            ->editable()
+            ->sortable();
 
         return $grid;
     }

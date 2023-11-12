@@ -17,5 +17,6 @@ Route::group([
     $router->resource('site/config', SiteController::class);
     $router->resource('content/slide', SlideController::class);
     $router->resource('content/portfolio', PortfolioController::class);
-
+    $router->resource('content/post', PostController::class);
+    $router->resource('content/post-category', PostCategoryController::class);
 });

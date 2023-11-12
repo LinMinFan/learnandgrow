@@ -42,9 +42,7 @@ class SiteMenuController extends Controller
                     $form = new \Encore\Admin\Widgets\Form();
                     $form->action(admin_url('site/menu'));
 
-                    $menuModel = config('admin.database.site_menu_model');
-
-                    $form->select('parent_id', trans('admin.parent_id'))->options($menuModel::selectOptions());
+                    $form->select('parent_id', trans('admin.parent_id'))->options(SiteMenu::selectOptions());
                     $form->text('title', trans('admin.title'))->rules('required');
                     $form->text('uri', trans('admin.uri'))
                         ->rules('required')
@@ -73,9 +71,8 @@ class SiteMenuController extends Controller
      */
     protected function treeView()
     {
-        $menuModel = config('admin.database.site_menu_model');
 
-        $tree = new Tree(new $menuModel());
+        $tree = new Tree(new SiteMenu());
 
         $tree->disableCreate();
 
@@ -124,13 +121,12 @@ class SiteMenuController extends Controller
      */
     public function form()
     {
-        $menuModel = config('admin.database.site_menu_model');
 
-        $form = new Form(new $menuModel());
+        $form = new Form(new SiteMenu());
 
         $form->display('id', 'ID');
 
-        $form->select('parent_id', trans('admin.parent_id'))->options($menuModel::selectOptions());
+        $form->select('parent_id', trans('admin.parent_id'))->options(SiteMenu::selectOptions());
         $form->text('title', trans('admin.title'))
             ->rules('required');
         $form->text('uri', trans('admin.uri'))

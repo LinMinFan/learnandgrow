@@ -18,7 +18,7 @@ class PageController extends AdminController
      */
     protected function title()
     {
-        return __('Page');
+        return __('Pages');
     }
 
     /**
@@ -29,6 +29,9 @@ class PageController extends AdminController
     protected function grid()
     {
         $grid = new Grid(new Page());
+
+        $grid->model()
+            ->orderBy('created_at', 'asc');
 
         $grid->disableExport();
         $grid->disableRowSelector();
@@ -45,9 +48,7 @@ class PageController extends AdminController
             $filter->where(function ($query) {
                 $query->where('title', 'like', "%{$this->input}%")
                     ->orWhere('content', 'like', "%{$this->input}%")
-                    ->orWhere('slug', 'like', "%{$this->input}%")
-                    ->orWhere('meta_keywords', 'like', "%{$this->input}%")
-                    ->orWhere('meta_description', 'like', "%{$this->input}%");
+                    ->orWhere('slug', 'like', "%{$this->input}%");
             }, __('Keywords'))->placeholder(__('Title, Content'));
 
             $filter->equal('status', __('Status'))
@@ -69,8 +70,8 @@ class PageController extends AdminController
         $grid->column('slug', __('Slug'));
         
         $states = [
-            'on'  => ['value' => 1, 'text' => '啟用', 'color' => 'primary'],
-            'off' => ['value' => 0, 'text' => '停用', 'color' => 'danger'],
+            'on'  => ['value' => 1, 'text' => __('Disable'), 'color' => 'primary'],
+            'off' => ['value' => 0, 'text' => __('Enable'), 'color' => 'danger'],
         ];
 
         $grid->column('status')->switch($states);
