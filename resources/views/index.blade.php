@@ -9,7 +9,8 @@
 <!-- ##### Hero Area Start ##### -->
 <div class="hero-area">
     <!-- Hero Slides Area -->
-    <div class="hero-slides owl-carousel">
+    <x-carousel></x-carousel>
+    {{-- <div class="hero-slides owl-carousel">
         <!-- Single Slide -->
         <div class="single-hero-slide bg-img" style="background-image: url(img/bg-img/b2.jpg);">
             <div class="container h-100">
@@ -55,7 +56,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 </div>
 <!-- ##### Hero Area End ##### -->
 

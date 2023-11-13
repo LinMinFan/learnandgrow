@@ -3,13 +3,12 @@
 namespace App\View\Components;
 
 use Illuminate\View\Component;
-use Encore\Admin\Tree;
-use App\Models\Admin\SiteMenu;
+use App\Models\Admin\Slide;
 
-class Navigation extends Component
+class Carousel extends Component
 {
 
-    public $itemLinks;
+    public $slideImages;
 
     /**
      * Create a new component instance.
@@ -18,11 +17,7 @@ class Navigation extends Component
      */
     public function __construct()
     {
-        $tree = new Tree(new SiteMenu());
-        $tree->query(function ($q) {
-            return $q->select(['id', 'parent_id', 'title', 'uri']);
-        });
-        $this->itemLinks = json_decode(json_encode($tree->getItems()));
+        $this->slideImages = Slide::all();
     }
 
     /**
@@ -32,6 +27,6 @@ class Navigation extends Component
      */
     public function render()
     {
-        return view('components.navigation');
+        return view('components.carousel');
     }
 }

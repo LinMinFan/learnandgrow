@@ -231,7 +231,7 @@ https://github.com/imakewebthings/jquery-waypoints/blob/master/licenses.txt
 }(jQuery));
 
 // :: Search Area
-var search = document.getElementById('search'),
+/* var search = document.getElementById('search'),
     searchWrapper = document.getElementById('search-wrapper'),
     closeIcon = document.getElementById('close-icon');
     search.onfocus = function () {
@@ -254,6 +254,6 @@ closeIcon.onclick = function () {
     setTimeout(function () {
         closeIcon.classList.remove('closing');
     }, 1000);
-}
+} */
 
 // [End Include All Plugins]
