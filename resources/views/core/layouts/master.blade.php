@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
 <head>
-    <title>學習與成長</title>
     <meta charset="utf-8">
     <meta name="renderer" content="webkit">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -15,6 +14,12 @@
     @stack('meta')
     <link rel="canonical" href="{{url()->current()}}">
 
+    <!-- Title -->
+    <title>學習與成長</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="{{asset('img/favicon.ico')}}">
+
     {{-- slide --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
@@ -25,10 +30,8 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     {{-- aos end --}}
 
-    <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
-    <link href="{{asset('css/fontawesome.min.css')}}" rel="stylesheet">
-    <link href="{{asset('css/global.css')}}" rel="stylesheet">
-    <script src="{{asset('js/jquery.min.js')}}"></script>
+    <link href="{{asset('css/style.css')}}" rel="stylesheet">
+
     @stack('css')
 
     {{-- Google Analytics --}}
@@ -46,9 +49,19 @@
         @include('site.partials.footer')
     </footer>
 
-    <script defer src="{{asset('js/bootstrap.min.js')}}"></script>
-    <script defer src="{{asset('js/popper.min.js') }}"></script>
+    <!-- jQuery (Necessary for All JavaScript Plugins) -->
+    <script src="{{asset('js/jquery/jquery-2.2.4.min.js')}}"></script>
+    <!-- Popper js -->
+    <script src="{{asset('js/popper.min.js')}}"></script>
+    <!-- Bootstrap js -->
+    <script src="{{asset('js/bootstrap.min.js')}}"></script>
+    <!-- Plugins js -->
+    <script src="{{asset('js/plugins.js')}}"></script>
+    <!-- Active js -->
+    <script src="{{asset('js/active.js')}}"></script>
+
     <script defer src="{{asset('js/main.js')}}"></script>
+
     @stack('js')
 </body>
 </html>
