@@ -3,7 +3,7 @@
     <ul>
         @foreach ($itemLinks as $itemLink)
             <li>
-                <a href="{{$itemLink->uri}}">{{$itemLink->title}}</a>
+                <a href="{{url($itemLink->uri)}}">{{$itemLink->title}}</a>
             </li>
         @endforeach
     </ul>
