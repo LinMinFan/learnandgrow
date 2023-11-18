@@ -7,7 +7,7 @@
 @section('content')
 
 <!-- ##### Breadcumb Area Start ##### -->
-<div class="breadcumb-area bg-img" style="background-image: url(img/bg-img/b1.jpg);">
+<div class="breadcumb-area bg-img" style="background-image: url(img/about_me.jpg);">
     <div class="container h-100">
         <div class="row h-100 align-items-center">
             <div class="col-12">
@@ -30,9 +30,13 @@
                     <!-- Blog Content -->
                     <div class="single-blog-content">
                         <div class="line"></div>
-                        <a href="#" class="post-tag">Lifestyle</a>
-                        <h4><a href="#" class="post-headline">Welcome to this Lifestyle blog</a></h4>
-                        <p class="mb-3">Curabitur venenatis efficitur lorem sed tempor. Integer aliquet tempor cursus. Nullam vestibulum convallis risus vel condimentum. Nullam auctor lorem in libero luctus, vel volutpat quam tincidunt. Morbi sodales, dolor id ultricies dictum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestibulum mauris quis aliquam. Integer accumsan sodales odio, id tempus velit ullamcorper id. Quisque at erat eu libero consequat tempus.slacus sit amet augue sodales, vel cursus enim tristique.</p>
+                        <h4><a href="#" class="post-headline">專長與興趣</a></h4>
+                        <ul>
+                            <li><i class="fa fa-angle-right"></i> Web API 設計與開發</li>
+                            <li><i class="fa fa-angle-right"></i> 框架的運用</li>
+                            <li><i class="fa fa-angle-right"></i> 資料庫串接與設計</li>
+                            <li><i class="fa fa-angle-right"></i> 第三方系統串接合作</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -41,17 +45,22 @@
                 <div class="single-blog-area clearfix mb-100">
                     <!-- Blog Content -->
                     <div class="single-blog-content">
-                        <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestibulum mauris quis aliquam. Integer accumsan sodales odio, id tempus velit ullamcorper id. Quisque at erat eu libero consequat tempus. Quisque molestie convallis tempus. Ut semper purus metus, a euismod sapien sodales ac. Duis viverra eleifend fermentum. Donec sagittis lacus sit amet augue sodales, vel cursus enim tristique. Maecenas vitae massa ut est consectetur sagittis quis vitae tortor.</p>
+                        <ul>
+                            <li><i class="fa fa-angle-right"></i> 喜歡喜劇及科幻類電影</li>
+                            <li><i class="fa fa-angle-right"></i> 喜歡嘗試各國美食</li>
+                            <li><i class="fa fa-angle-right"></i> 藍球、棒球運動</li>
+                        </ul>
                     </div>
                 </div>
             </div>
             <!-- Single Blog Area -->
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="single-catagory-area clearfix mb-100">
-                    <img src="img/blog-img/1.jpg" alt="">
-                    <!-- Catagory Title -->
-                    <div class="catagory-title">
-                        <a href="#">Lifestyle posts</a>
+            <div class="col-12 col-lg-4">
+                <div class="single-blog-area clearfix mb-100">
+                    <!-- Blog Content -->
+                    <div class="single-blog-content">
+                        <div>
+                            勝利女神不一定眷顧所有的人，但曾經嘗試過，努力過的人，他們的人生總會留下痕跡！
+                        </div>
                     </div>
                 </div>
             </div>
@@ -61,7 +70,7 @@
 <!-- ##### Blog Wrapper End ##### -->
 
 <!-- ##### Cool Facts Area Start ##### -->
-<div class="cool-facts-area section-padding-100-0 bg-img background-overlay" style="background-image: url(img/bg-img/b4.jpg);">
+<div class="cool-facts-area section-padding-100-0 bg-img background-overlay" style="background-image: url(img/about_me_A.jpg);">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -69,9 +78,8 @@
                     <!-- Blog Content -->
                     <div class="single-blog-content">
                         <div class="line"></div>
-                        <a href="#" class="post-tag">Lifestyle</a>
-                        <h4><a href="#" class="post-headline">Welcome to this Lifestyle blog</a></h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestibulum mauris quis aliquam. Integer accumsan sodales odio, id tempus velit ullamcorper id. Quisque at erat eu libero consequat tempus. Quisque molestie convallis tempus. Ut semper purus metus, a euismod sapien sodales ac. Duis viverra eleifend fermentum. Donec sagittis lacus sit amet augue sodales, vel cursus enim tristique. Maecenas vitae massa ut est consectetur sagittis quis vitae tortor. Sed et massa vel.</p>
+                        <h4><a href="#" class="post-headline">技能</a></h4>
+                        <p>Html、Css、Javascript、Jquery、Php、Mysql、Linux、git。</p>
                     </div>
                 </div>
             </div>
@@ -80,29 +88,25 @@
             <!-- Single Cool Facts Area -->
             <div class="col-12 col-sm-6 col-lg-3">
                 <div class="single-cool-facts-area text-center mb-100">
-                    <h2><span class="counter">25</span></h2>
-                    <p>Awards won</p>
+                    <img src="img/php.png" alt="">
                 </div>
             </div>
             <!-- Single Cool Facts Area -->
             <div class="col-12 col-sm-6 col-lg-3">
                 <div class="single-cool-facts-area text-center mb-100">
-                    <h2><span class="counter">12</span>K</h2>
-                    <p>FB Followers</p>
+                    <img src="img/sql.png" alt="">
                 </div>
             </div>
             <!-- Single Cool Facts Area -->
             <div class="col-12 col-sm-6 col-lg-3">
                 <div class="single-cool-facts-area text-center mb-100">
-                    <h2><span class="counter">9</span></h2>
-                    <p>Team members</p>
+                    <img src="img/linux.png" alt="">
                 </div>
             </div>
             <!-- Single Cool Facts Area -->
             <div class="col-12 col-sm-6 col-lg-3">
                 <div class="single-cool-facts-area text-center mb-100">
-                    <h2><span class="counter">16</span></h2>
-                    <p>Coffes/Day</p>
+                    <img src="img/laravel.png" alt="">
                 </div>
             </div>
         </div>
@@ -110,88 +114,13 @@
 </div>
 <!-- ##### Cool Facts Area End ##### -->
 
-<!-- ##### Blog Wrapper Start ##### -->
-<div class="blog-wrapper section-padding-100-0 clearfix">
-    <div class="container">
-        <div class="row">
-            <!-- Single Blog Area  -->
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="single-blog-area blog-style-2 mb-100">
-                    <div class="single-blog-thumbnail">
-                        <img src="img/blog-img/4.jpg" alt="">
-                        <div class="post-date">
-                            <a href="#">10 <span>march</span></a>
-                        </div>
-                    </div>
-                    <!-- Blog Content -->
-                    <div class="single-blog-content mt-50">
-                        <div class="line"></div>
-                        <a href="#" class="post-tag">Lifestyle</a>
-                        <h4><a href="#" class="post-headline">We love colors in 2018</a></h4>
-                        <p>Curabitur venenatis efficitur lorem sed tempor. Integer aliquet tempor cursus. Nullam vestibulum convallis risus vel condimentum. Nullam auctor lorem in libero luctus, vel volutpat quam tincidunt.</p>
-                        <div class="post-meta">
-                            <p>By <a href="#">james smith</a></p>
-                            <p>3 comments</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Single Blog Area  -->
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="single-blog-area blog-style-2 mb-100">
-                    <div class="single-blog-thumbnail">
-                        <img src="img/blog-img/5.jpg" alt="">
-                        <div class="post-date">
-                            <a href="#">10 <span>march</span></a>
-                        </div>
-                    </div>
-                    <!-- Blog Content -->
-                    <div class="single-blog-content mt-50">
-                        <div class="line"></div>
-                        <a href="#" class="post-tag">Lifestyle</a>
-                        <h4><a href="#" class="post-headline">Party people in the house</a></h4>
-                        <p>Curabitur venenatis efficitur lorem sed tempor. Integer aliquet tempor cursus. Nullam vestibulum convallis risus vel condimentum. Nullam auctor lorem in libero luctus, vel volutpat quam tincidunt.</p>
-                        <div class="post-meta">
-                            <p>By <a href="#">james smith</a></p>
-                            <p>3 comments</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Single Blog Area  -->
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="single-blog-area blog-style-2 mb-100">
-                    <div class="single-blog-thumbnail">
-                        <img src="img/blog-img/6.jpg" alt="">
-                        <div class="post-date">
-                            <a href="#">10 <span>march</span></a>
-                        </div>
-                    </div>
-                    <!-- Blog Content -->
-                    <div class="single-blog-content mt-50">
-                        <div class="line"></div>
-                        <a href="#" class="post-tag">Lifestyle</a>
-                        <h4><a href="#" class="post-headline">We love colors in 2018</a></h4>
-                        <p>Curabitur venenatis efficitur lorem sed tempor. Integer aliquet tempor cursus. Nullam vestibulum convallis risus vel condimentum. Nullam auctor lorem in libero luctus, vel volutpat quam tincidunt.</p>
-                        <div class="post-meta">
-                            <p>By <a href="#">james smith</a></p>
-                            <p>3 comments</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- ##### Blog Wrapper End ##### -->
-
 <!-- ##### Instagram Feed Area Start ##### -->
 <div class="instagram-feed-area">
     <div class="container">
         <div class="row">
             <div class="col-12">
                 <div class="insta-title">
-                    <h5>Follow us @ Instagram</h5>
+                    <h5>AI</h5>
                 </div>
             </div>
         </div>
@@ -200,7 +129,7 @@
     <div class="instagram-slides owl-carousel">
         <!-- Single Insta Feed -->
         <div class="single-insta-feed">
-            <img src="img/instagram-img/1.png" alt="">
+            <img src="img/ai01.png" alt="">
             <!-- Hover Effects -->
             <div class="hover-effects">
                 <a href="#" class="d-flex align-items-center justify-content-center"><i class="fa fa-instagram"></i></a>
@@ -208,7 +137,7 @@
         </div>
         <!-- Single Insta Feed -->
         <div class="single-insta-feed">
-            <img src="img/instagram-img/2.png" alt="">
+            <img src="img/ai02.png" alt="">
             <!-- Hover Effects -->
             <div class="hover-effects">
                 <a href="#" class="d-flex align-items-center justify-content-center"><i class="fa fa-instagram"></i></a>
@@ -216,7 +145,7 @@
         </div>
         <!-- Single Insta Feed -->
         <div class="single-insta-feed">
-            <img src="img/instagram-img/3.png" alt="">
+            <img src="img/ai03.png" alt="">
             <!-- Hover Effects -->
             <div class="hover-effects">
                 <a href="#" class="d-flex align-items-center justify-content-center"><i class="fa fa-instagram"></i></a>
@@ -224,7 +153,7 @@
         </div>
         <!-- Single Insta Feed -->
         <div class="single-insta-feed">
-            <img src="img/instagram-img/4.png" alt="">
+            <img src="img/ai04.png" alt="">
             <!-- Hover Effects -->
             <div class="hover-effects">
                 <a href="#" class="d-flex align-items-center justify-content-center"><i class="fa fa-instagram"></i></a>
@@ -232,7 +161,7 @@
         </div>
         <!-- Single Insta Feed -->
         <div class="single-insta-feed">
-            <img src="img/instagram-img/5.png" alt="">
+            <img src="img/ai05.png" alt="">
             <!-- Hover Effects -->
             <div class="hover-effects">
                 <a href="#" class="d-flex align-items-center justify-content-center"><i class="fa fa-instagram"></i></a>
@@ -240,7 +169,7 @@
         </div>
         <!-- Single Insta Feed -->
         <div class="single-insta-feed">
-            <img src="img/instagram-img/6.png" alt="">
+            <img src="img/ai06.png" alt="">
             <!-- Hover Effects -->
             <div class="hover-effects">
                 <a href="#" class="d-flex align-items-center justify-content-center"><i class="fa fa-instagram"></i></a>
@@ -248,7 +177,7 @@
         </div>
         <!-- Single Insta Feed -->
         <div class="single-insta-feed">
-            <img src="img/instagram-img/7.png" alt="">
+            <img src="img/ai07.png" alt="">
             <!-- Hover Effects -->
             <div class="hover-effects">
                 <a href="#" class="d-flex align-items-center justify-content-center"><i class="fa fa-instagram"></i></a>
