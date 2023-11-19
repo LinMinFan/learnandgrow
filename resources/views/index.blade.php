@@ -45,7 +45,7 @@
                 <x-note-book></x-note-book>
                 <!-- Load More -->
                 <div class="load-more-btn mt-100 wow fadeInUp" data-wow-delay="0.7s" data-wow-duration="1000ms">
-                    <a href="#" class="btn original-btn">前往學習筆記</a>
+                    <a href="category/notebook" class="btn original-btn">前往學習筆記</a>
                 </div>
             </div>
         </div>

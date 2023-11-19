@@ -26,8 +26,8 @@ class PageController extends Controller
             
             $view = 'content.page.'. $name;
 
-            return view($view)
-                ->with(compact('content'));
+            return view($view,compact('content'));
+            
         } else {
             $view = 'content.' . $name;
 

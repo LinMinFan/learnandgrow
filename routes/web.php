@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,5 +25,10 @@ Route::get('/', function () {
 
 
 Route::get('{name}', [PageController::class,'show'])
-->name('page.show');
+    ->name('page.show');
 
+Route::get('category/{slug}',[PostController::class,'index'])
+    ->name('post.index');
+
+Route::get('post/{slug}', [PostController::class,'show'])
+    ->name('post.show');

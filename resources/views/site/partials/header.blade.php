@@ -25,50 +25,46 @@
 
 <!-- ##### Header Area Start ##### -->
 <header class="header-area">
-
-    <!-- Logo Area -->
-    <div class="logo-area text-center">
-        <div class="container h-100">
-            <div class="row h-100 align-items-center">
-                <div class="col-12">
-                    <a href="/" class="original-logo"><img src="{{asset('img/logo.png')}}" alt=""></a>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- Nav Area -->
     <div class="original-nav-area" id="stickyNav">
         <div class="classy-nav-container breakpoint-off">
             <div class="container">
-                <!-- Classy Menu -->
-                <nav class="classy-navbar justify-content-center">
-
-                    <!-- Navbar Toggler -->
-                    <div class="classy-navbar-toggler">
-                        <span class="navbarToggler"><span></span><span></span><span></span></span>
+                <div class="row" style="max-height: 70px">
+                    <!-- Logo Area -->
+                    <div class="col-6 d-flex justify-content-start" style="height: 70px">
+                        <a href="/" class="original-logo">
+                            <img style="max-height: 70px" src="{{asset('img/logo.png')}}" alt="">
+                        </a>
                     </div>
-
-                    <!-- Menu -->
-                    <div class="classy-menu" id="originalNav">
-                        <!-- close btn -->
-                        <div class="classycloseIcon">
-                            <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                    <!-- Classy Menu -->
+                    <nav class="classy-navbar col-6 d-flex justify-content-end">
+            
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
                         </div>
-
-                        <!-- Nav Start -->
-                        <x-navigation></x-navigation>
-                        <!-- Nav End -->
-                    </div>
-                </nav>
+            
+                        <!-- Menu -->
+                        <div class="classy-menu" id="originalNav">
+                            <!-- close btn -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+            
+                            <!-- Nav Start -->
+                            <x-navigation></x-navigation>
+                            <!-- Nav End -->
+                        </div>
+                    </nav>
+                </div>
             </div>
         </div>
     </div>
 </header>
 <!-- ##### Header Area End ##### -->
-
+<hr>
 <!-- ##### Breadcumb Area Start ##### -->
-<div class="breadcumb-area bg-img" style="background-image: url(img/bg.jpg);">
+<div class="breadcumb-area bg-img" style="background-image: url({{asset('img/bg.jpg')}});">
     <div class="container h-100">
         <div class="row h-100 align-items-center">
             <div class="col-12">

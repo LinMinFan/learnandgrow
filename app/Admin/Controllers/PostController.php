@@ -84,8 +84,8 @@ class PostController extends AdminController
         $grid->column('title', __('Title'));
         
         $states = [
-            'on'  => ['value' => 1, 'text' => __('Disable'), 'color' => 'primary'],
-            'off' => ['value' => 0, 'text' => __('Enable'), 'color' => 'danger'],
+            'on'  => ['value' => 1, 'text' => __('Enable'), 'color' => 'success'],
+            'off' => ['value' => 0, 'text' => __('Disable'), 'color' => 'danger'],
         ];
 
         $grid->column('status')->switch($states);

@@ -147,7 +147,7 @@ ol {
     list-style: none; }
 
 img {
-  height: auto;
+  max-height: auto;
   max-width: 100%; }
 
 .mt-15 {
@@ -350,9 +350,9 @@ img {
     border-bottom: 1px solid #e1e1e1; }
     @media only screen and (max-width: 767px) {
       .header-area .logo-area {
-        height: 100px; } }
+        height: 70px; } }
   .header-area .original-nav-area {
-    height: 100px; }
+    height: 70px; }
     @media only screen and (max-width: 767px) {
       .header-area .original-nav-area {
         height: 70px; } }
@@ -377,7 +377,7 @@ img {
     .header-area .original-nav-area .classy-nav-container {
       background-color: transparent; }
     .header-area .original-nav-area .classy-navbar {
-      height: 100px;
+      height: 70px;
       padding: 0; }
       @media only screen and (max-width: 767px) {
         .header-area .original-nav-area .classy-navbar {
@@ -644,7 +644,7 @@ img {
       color: #ffffff; 
     }
     .single-catagory-area .catagory-title a {
-      font-size: 10px;
+      font-size: 16px;
       color: #ffffff00;
       letter-spacing: 3px;
       display: inline-block;
