@@ -2,8 +2,8 @@
 
 namespace App\Admin\Controllers;
 
-use App\Models\Admin\PostCategory;
-use App\Models\Admin\Post;
+use App\Models\PostCategory;
+use App\Models\Post;
 use Encore\Admin\Controllers\HasResourceActions;
 use Encore\Admin\Form;
 use Encore\Admin\Layout\Column;

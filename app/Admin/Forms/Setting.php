@@ -4,7 +4,7 @@ namespace App\Admin\Forms;
 
 use Encore\Admin\Widgets\Form;
 use Illuminate\Http\Request;
-use App\Models\Admin\Site;
+use App\Models\Site;
 use Storage;
 
 class Setting extends Form

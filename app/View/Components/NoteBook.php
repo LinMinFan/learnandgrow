@@ -3,7 +3,7 @@
 namespace App\View\Components;
 
 use Illuminate\View\Component;
-use App\Models\Admin\Post;
+use App\Models\Post;
 
 class NoteBook extends Component
 {

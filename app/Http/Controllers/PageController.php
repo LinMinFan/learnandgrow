@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Admin\Page;
+use App\Models\Page;
 use Encore\Admin\Facades\Admin;
 
 class PageController extends Controller

@@ -191,8 +191,8 @@ return [
         // Menu table and model.
         'menu_table' => 'admin_menu',
         'menu_model' => Encore\Admin\Auth\Database\Menu::class,
-        'site_menu_model' => App\Models\Admin\SiteMenu::class,
-        'admin_site_model' => App\Models\Admin\Site::class,
+        'site_menu_model' => App\Models\SiteMenu::class,
+        'admin_site_model' => App\Models\Site::class,
 
         // Pivot table for table above.
         'operation_log_table'    => 'admin_operation_log',

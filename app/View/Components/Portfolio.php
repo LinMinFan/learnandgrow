@@ -3,7 +3,7 @@
 namespace App\View\Components;
 
 use Illuminate\View\Component;
-use App\Models\Admin\Portfolio as PortfolioModels;
+use App\Models\Portfolio as PortfolioModels;
 
 class Portfolio extends Component
 {

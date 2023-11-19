@@ -4,7 +4,7 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 use Encore\Admin\Tree;
-use App\Models\Admin\SiteMenu;
+use App\Models\SiteMenu;
 
 class Navigation extends Component
 {

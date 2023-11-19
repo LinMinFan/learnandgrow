@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Models\Admin;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Encore\Admin\Traits\ModelTree;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use App\Models\Admin\Post;
+use App\Models\Post;
 
 class PostCategory extends Model
 {

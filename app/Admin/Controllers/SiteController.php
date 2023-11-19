@@ -2,7 +2,7 @@
 
 namespace App\Admin\Controllers;
 
-use App\Models\Admin\Site;
+use App\Models\Site;
 use App\Admin\Forms\Setting;
 use App\Http\Controllers\Controller;
 use Encore\Admin\Layout\Content;

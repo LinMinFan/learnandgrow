@@ -3,7 +3,7 @@
 namespace App\View\Components;
 
 use Illuminate\View\Component;
-use App\Models\Admin\Slide;
+use App\Models\Slide;
 
 class Carousel extends Component
 {
