@@ -3,7 +3,7 @@
     <div class="row align-items-center">
         <div class="col-12 col-md-6">
             <div class="single-blog-thumbnail">
-                <img src="{{asset('storage/'.$post->image)}}" alt="">
+                <img src="{{config('learnandgrow.tag.'.$post->tag)}}" alt="">
             </div>
         </div>
         <div class="col-12 col-md-6">

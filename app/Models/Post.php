@@ -22,6 +22,7 @@ class Post extends Model
         'meta_description',
         'content',
         'image',
+        'tag',
         'top',
         'sort',
         'status',

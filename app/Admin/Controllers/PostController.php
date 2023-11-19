@@ -131,7 +131,8 @@ class PostController extends AdminController
         $form->textarea('meta_keywords', __('Meta keywords'));
         $form->textarea('meta_description', __('Meta description'));
         $form->textarea('content', __('Content'));
-        $form->image('image', __('Image'));
+        $form->image('image', __('Image'))->removable();
+        $form->text('tag', __('Tag'));
 
         $form->number('sort', __('Sort'))
             ->min(1)

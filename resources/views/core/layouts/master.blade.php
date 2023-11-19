@@ -6,19 +6,29 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="referrer" content="same-origin">
 	<meta name="rating" content="general">
-	<meta name="author" content="林旻汎">
-    <meta name="description" content="學習與成長">
-	<meta name="keywords" content="學習與成長">
+	<meta name="author" content="{{$site->copyright}}">
+    @if (isset($content))
+        <meta name="description" content="{{$content->meta_description}}">
+        <meta name="keywords" content="{{$content->meta_keywords}}">
+    @else
+        <meta name="description" content="{{$site->keywords}}">
+        <meta name="keywords" content="{{$site->keywords}}">
+    @endif
+	
     <meta name="robots" content="index,follow">
     <meta name="_token" content="{{csrf_token()}}">
     @stack('meta')
     <link rel="canonical" href="{{url()->current()}}">
 
     <!-- Title -->
-    <title>學習與成長</title>
+    @if (isset($content))
+        <title>{{$content->title}}</title>
+    @else
+        <title>{{$site->title}}</title>
+    @endif
     
     <!-- Favicon -->
-    <link rel="icon" href="{{asset('img/favicon.ico')}}">
+    <link rel="icon" href="{{url('storage/'.$site->favicon)}}">
 
     {{-- slide --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
