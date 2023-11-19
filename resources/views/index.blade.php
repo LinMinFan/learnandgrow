@@ -6,6 +6,8 @@
 
 @section('content')
 
+<hr>
+
 <!-- ##### Hero Area Start ##### -->
 <div class="hero-area">
     <!-- Hero Slides Area -->

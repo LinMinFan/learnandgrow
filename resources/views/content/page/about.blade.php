@@ -6,20 +6,6 @@
 
 @section('content')
 
-<!-- ##### Breadcumb Area Start ##### -->
-<div class="breadcumb-area bg-img" style="background-image: url(img/about_me.jpg);">
-    <div class="container h-100">
-        <div class="row h-100 align-items-center">
-            <div class="col-12">
-                <div class="breadcumb-content text-center">
-                    <h2>about me</h2>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- ##### Breadcumb Area End ##### -->
-
 <!-- ##### Blog Wrapper Start ##### -->
 <div class="blog-wrapper section-padding-100-0 clearfix">
     <div class="container">
@@ -70,7 +56,7 @@
 <!-- ##### Blog Wrapper End ##### -->
 
 <!-- ##### Cool Facts Area Start ##### -->
-<div class="cool-facts-area section-padding-100-0 bg-img background-overlay" style="background-image: url(img/about_me_A.jpg);">
+<div class="cool-facts-area section-padding-100-0 bg-img background-overlay" style="background-image: url(img/about_me.jpg);">
     <div class="container">
         <div class="row">
             <div class="col-12">
