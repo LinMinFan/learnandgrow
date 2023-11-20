@@ -16,7 +16,7 @@ class PostController extends Controller
      * @param  Request $request
      * @return View
      */
-    public function index(Request $request,$slug)
+    public function index(Request $request,$slug,$sub = null)
     {
         $view = 'content.post_category';
 
@@ -26,8 +26,27 @@ class PostController extends Controller
 
             $children = $content->children;
 
+            if ($sub) {
+                $postsCategory = PostCategory::where('slug', $sub)->first();
+                if ($postsCategory) {
+                    $posts = $postsCategory->posts()->paginate($content->size);
+                }else {
+                    abort(404);
+                }
+                
+            }else {
+                // 獲取所有 children 的文章 ID
+                $postIds = $content->children->flatMap(function ($child) {
+                    return $child->posts->pluck('id');
+                });
 
-            return view($view,compact('content','children'));
+                // 使用 Eloquent 查詢生成的分頁實例
+                $posts = Post::whereIn('id', $postIds)->paginate($content->size);
+            }
+
+            
+
+            return view($view,compact('content','children','posts','sub'));
         }
         
         abort(404);

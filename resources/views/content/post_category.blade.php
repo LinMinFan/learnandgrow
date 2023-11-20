@@ -1,45 +1,43 @@
 @extends('core.layouts.master')
 
 @push('css')
-
+    <link href="{{asset('css/post-category.css')}}" rel="stylesheet">
 @endpush
 
 @section('content')
 
-<!-- ##### Blog Wrapper Start ##### -->
-<div class="blog-wrapper section-padding-100 clearfix">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-lg-9">
-                <!-- Single Blog Area  -->
-                @foreach ($posts as $post)
-                    <div class="single-blog-area blog-style-2 mb-50 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1000ms">
-                        <div class="row align-items-center">
-                            <div class="col-12 col-md-6">
-                                <div class="single-blog-thumbnail">
-                                    <img src="{{config('learnandgrow.tag.'.$post->tag)}}" alt="">
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6">
-                                <!-- Blog Content -->
-                                <div class="single-blog-content">
-                                    <div class="line"></div>
-                                    @foreach ($post->categories as $category)
-                                        <a href="#" class="post-tag">{{$category->title}}</a>
-                                    @endforeach
-                                    <h4><a href="#" class="post-headline">{{$post->title}}</a></h4>
-                                    <p>{{$post->meta_description}}</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+<hr>
+
+<div class="container mt-2">
+
+    <div class="row">
+        <div class="col-3">
+            <select class="selectpicker form-control" id="categorySelect" data-url="{{route('post.index',['slug' => $content->slug])}}">
+                <option value="0">請選擇</option>
+                @foreach ($children as $children_category)
+                    <option value="{{$children_category->slug}}" {{($children_category->slug == $sub)?"selected":""}}>{{$children_category->title}}</option>
                 @endforeach
-                <!-- Load More -->
-            </div>
+            </select>
         </div>
     </div>
-
+    <br>
+    <div class="row">
+        @if ($posts)
+            @foreach ($posts as $post)
+            <div class="col-md-3 col-sm-6">
+                <div class="card card-block text-center p-3">
+                    <img class="mx-auto mt-2" src="{{asset(config('learnandgrow.tag.'.$post->tag))}}" alt="">
+                    <h5 class="card-title mt-3 mb-3 text-left">{{$post->title}}</h5>
+                    <p class="card-text text-left">{{mb_substr($post->meta_description, 0, 50, 'UTF-8')}}...</p> 
+                </div>
+            </div>
+            @endforeach
+        @endif
+    </div>
 </div>
-<!-- ##### Blog Wrapper End ##### -->
 
 @endsection
+
+@push('js')
+    <script src="{{asset('js/post-category.js')}}"></script>
+@endpush

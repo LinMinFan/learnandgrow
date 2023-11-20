@@ -27,7 +27,7 @@ Route::get('/', function () {
 Route::get('{name}', [PageController::class,'show'])
     ->name('page.show');
 
-Route::get('category/{slug}',[PostController::class,'index'])
+Route::get('category/{slug}/{sub?}',[PostController::class,'index'])
     ->name('post.index');
 
 Route::get('post/{slug}', [PostController::class,'show'])
