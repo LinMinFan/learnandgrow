@@ -4,14 +4,14 @@ $(document).ready(function() {
         // 取得選取的值
         let selectedSlug = $(this).val();
         let dataUrl = $(this).data('url');
+        let targetURL = dataUrl
 
         // 如果選擇的值不是預設的值
         if (selectedSlug !== '0') {
             // 構建目標 URL
-            let targetURL = dataUrl + '/' + selectedSlug;
-
-            // 重新導向到目標 URL
-            window.location.href = targetURL;
+            targetURL = dataUrl + '/' + selectedSlug;
         }
+        
+        window.location.href = targetURL;
     });
 });

@@ -13,7 +13,7 @@
     <div class="row">
         <div class="col-3">
             <select class="selectpicker form-control" id="categorySelect" data-url="{{route('post.index',['slug' => $content->slug])}}">
-                <option value="0">請選擇</option>
+                <option value="0">全部</option>
                 @foreach ($children as $children_category)
                     <option value="{{$children_category->slug}}" {{($children_category->slug == $sub)?"selected":""}}>{{$children_category->title}}</option>
                 @endforeach

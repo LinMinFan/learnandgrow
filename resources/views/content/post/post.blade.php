@@ -41,6 +41,7 @@
                     </div>
                 </div>
             </div>
+            <a href="{{route('post.index',['slug' => 'notebook'])}}" class="btn original-btn">看其他筆記</a>
         </div>
     </div>
 </div>
