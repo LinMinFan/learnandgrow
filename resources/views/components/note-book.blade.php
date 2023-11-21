@@ -13,7 +13,7 @@
                 @foreach ($post->categories as $category)
                     <a href="#" class="post-tag">{{$category->title}}</a>
                 @endforeach
-                <h4><a href="#" class="post-headline">{{$post->title}}</a></h4>
+                <h4><a href="{{route('post.show',['slug' => $post->slug])}}" class="post-headline">{{$post->title}}</a></h4>
                 <p>{{$post->meta_description}}</p>
             </div>
         </div>

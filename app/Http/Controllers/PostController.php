@@ -61,6 +61,10 @@ class PostController extends Controller
      */
     public function show(Request $request,$slug)
     {
-        
+        $content = Post::where('slug',$slug)->first();
+
+        $view = 'content.post.post';
+
+        return view($view,compact('content'));
     }
 }

@@ -29,6 +29,7 @@
                     <img class="mx-auto mt-2" src="{{asset(config('learnandgrow.tag.'.$post->tag))}}" alt="">
                     <h5 class="card-title mt-3 mb-3 text-left">{{$post->title}}</h5>
                     <p class="card-text text-left">{{mb_substr($post->meta_description, 0, 50, 'UTF-8')}}...</p> 
+                    <a href="{{route('post.show',['slug' => $post->slug])}}" class="btn original-btn">閱讀</a>
                 </div>
             </div>
             @endforeach
