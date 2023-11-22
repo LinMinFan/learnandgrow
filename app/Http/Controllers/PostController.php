@@ -41,7 +41,7 @@ class PostController extends Controller
                 });
 
                 // 使用 Eloquent 查詢生成的分頁實例
-                $posts = Post::whereIn('id', $postIds)->paginate($content->size);
+                $posts = Post::whereIn('id', $postIds)->simplePaginate($content->size);
             }
 
             

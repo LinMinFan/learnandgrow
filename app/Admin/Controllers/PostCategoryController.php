@@ -110,8 +110,8 @@ class PostCategoryController extends Controller
 
         $form->select('parent_id', trans('admin.parent_id'))->options(PostCategory::selectOptions());
         
-        $form->textarea('meta_keywords', __('Meta keywords'));
-        $form->textarea('meta_description', __('Meta description'));
+        $form->textarea('keywords', __('Meta keywords'));
+        $form->textarea('description', __('Meta description'));
         $form->text('size', __('Size'))->default(15);
 
         $form->display('created_at', trans('admin.created_at'));
