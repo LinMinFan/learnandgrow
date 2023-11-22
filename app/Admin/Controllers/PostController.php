@@ -132,7 +132,16 @@ class PostController extends AdminController
         $form->textarea('meta_description', __('Meta description'));
         $form->textarea('content', __('Content'));
         $form->image('image', __('Image'))->removable();
-        $form->text('tag', __('Tag'));
+
+        $form->select('tag', __('Tag'))
+            ->options([
+                'php' => 'php',
+                'mysql' => 'mysql',
+                'js' => 'js',
+                'linux' => 'linux',
+                'git' => 'git',
+                'laravel' => 'laravel',
+            ]);
 
         $form->number('sort', __('Sort'))
             ->min(1)

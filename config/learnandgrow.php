@@ -16,6 +16,8 @@ return [
         'mysql' => 'img/tag_mysql.png',
         'js' => 'img/tag_js.png',
         'linux' => 'img/tag_linux.png',
+        'git' => 'img/tag_git.png',
+        'laravel' => 'img/tag_laravel.png',
     ]
 
 
