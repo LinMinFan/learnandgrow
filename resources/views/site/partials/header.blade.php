@@ -80,3 +80,5 @@
     </div>
 </div>
 <!-- ##### Breadcumb Area End ##### -->
+
+@include('site.partials.notification')

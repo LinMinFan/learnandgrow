@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\FormController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,7 +22,7 @@ use App\Http\Controllers\PostController;
 
 Route::get('/', function () {
     return view('index');
-});
+})->name('index');;
 
 
 Route::get('{name}', [PageController::class,'show'])
@@ -32,3 +33,6 @@ Route::get('category/{slug}/{sub?}',[PostController::class,'index'])
 
 Route::get('post/{slug}', [PostController::class,'show'])
     ->name('post.show');
+
+Route::post('form', [FormController::class,'index'])
+->name('form');

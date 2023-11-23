@@ -40,6 +40,9 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     {{-- aos end --}}
 
+    <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('css/font-awesome.min.css')}}" rel="stylesheet">
+
     <link href="{{asset('css/style.css')}}" rel="stylesheet">
 
     @stack('css')
