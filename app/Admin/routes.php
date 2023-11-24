@@ -19,4 +19,5 @@ Route::group([
     $router->resource('content/portfolio', PortfolioController::class);
     $router->resource('content/post', PostController::class);
     $router->resource('content/post-category', PostCategoryController::class);
+    $router->resource('form', FormController::class);
 });
